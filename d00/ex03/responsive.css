@@ -1,0 +1,130 @@
+* {
+ 	margin: 0px;
+ 	padding: 0px;
+}
+
+ body {
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ }
+ 	
+ #wrapper {
+ 	width: 90vmin;
+ 	height: 49.5vmin;
+ 	font-size: 90vmin;
+ 	display: flex;
+ 	flex-direction: column;
+ }
+ 	
+ @media (min-aspect-ratio: 1/1) {
+ 	#wrapper {
+ 		width: 90vmax;
+ 		height: 49.5vmax;
+ 		font-size: 90vmax;
+ 	}
+ }
+ 	
+ @media (min-aspect-ratio: 18/10) {
+ 	#wrapper {
+ 		width: 162vmin;
+ 		height: 90vmin;
+ 		font-size: 162vmin;
+ 	}
+ }
+ 	
+ @media (min-width: 700px) and (min-height: 380px) {
+ 	.cell {
+ 		border: 1px solid black;
+ 	}
+ 	.blank {
+ 		border: 1px solid transparent;
+ 	}
+ }
+
+ .row {
+ 	height: 0;
+ 	display: 	flex;
+ 	flex-grow: 1;
+ 	justify-content: center;
+ }
+ 	
+ .cell {
+ 	flex-grow: 1;
+ 	width: 0;
+ 	padding: 0;
+ 	background-color: blue;
+ 	margin: 0.2%;
+ }
+ 	
+ #title {
+ 	align-content: center;
+ }
+ 	
+ #title p {
+ 	font-size: 5%;
+ }
+ 	
+ #title img {
+ 	width: 5%;
+ }
+ 	
+ .symbol {
+ 	text-align: 	center;
+ 	font-size: 	2%;
+ }
+ 
+ .number {
+ 	padding: 	0.1%;
+ 	text-align: 	left;
+ 	font-size: 	1.3%;
+ }
+ 	
+ .weight {
+ 	text-align: 	right;
+ 	font-size: 	1%;
+ }
+ 	
+ .nonmetal {
+ 	background-color: 	#FF9680; 
+ }
+ 	
+ .metal {
+ 	background-color: 	#FFD380;
+ }
+ 	
+ .semimetal {
+ 	background-color: 	#FFFD80;
+ }
+ 
+ .alkaline {
+ 	background-color: 	#ACFF80;
+ }
+ 
+ .halogen {
+ 	background-color: 	#80FFC5;
+ }
+ 
+ .basicmetal {
+ 	background-color: 	#80E8FF;
+ }
+ 
+ .transition {
+ 	background-color: 	#8099FF;
+ }
+ 	
+ .noblegas {
+ 	background-color: 	#AE80FF;
+ }
+ 	
+ .lanthanide {
+ 	background-color: 	#C870DF;
+ }
+ 	
+ .actinide {
+ 	background-color: 	#FFA0ED;
+ }
+ 	
+ .blank {
+ 	background-color: transparent;
+ }

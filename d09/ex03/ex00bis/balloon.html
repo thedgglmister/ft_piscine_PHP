@@ -1,0 +1,58 @@
+<DOCTYPE! html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style>
+		#balloon {
+			border-radius: 100%;
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="balloon"></div>
+</body>
+</html>
+<script>
+$(document).ready(function() {
+	var i = 0;
+
+	$("#balloon").on("click", function() {
+		var new_bgc;
+		if (i % 3 == 0)
+			new_bgc = "green";
+		else if (i % 3 == 1)
+			new_bgc = "blue";
+		else if (i % 3 == 2)
+			new_bgc = "red";
+		i++;
+		$(this).css({'width' : $(this).width() + 10,
+					 'height' : $(this).height() + 10,
+					 'background-color' : new_bgc});
+		if ($(this).width() > 420)
+			$(this).css({'width' : 200,
+					     'height' : 200});
+	});
+
+	$("#balloon").on("mouseleave", function() {
+		var new_bgc;
+		if (i % 3 == 0)
+			new_bgc = "blue";
+		else if (i % 3 == 1)
+			new_bgc = "red";
+		else if (i % 3 == 2)
+			new_bgc = "green";
+		i--;
+		if (i < 0)
+			i += 300;
+		$(this).css({'width' : $(this).width() - 5,
+					 'height' : $(this).height() - 5,
+					 'background-color' : new_bgc});
+		if ($(this).width() < 200)
+			$(this).css({'width' : 200,
+					     'height' : 200});
+	});
+});
+</script>

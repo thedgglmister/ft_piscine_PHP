@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	display: block;
+	position: relative;
+}
+
+td {
+	height: 10px;
+	width: 10px;
+	min-width: 10px;
+	background-color: #EEEEEE;
+	margin: 0px;
+}
+
+.piece {
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	z-index: 1;
+}
+
+.p1_piece {
+	background-color: blue;
+}
+
+.p2_piece {
+	background-color: green;
+}

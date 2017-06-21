@@ -1,0 +1,35 @@
+The Vector class defines a homogenous vector with x, y, z, and w coordinates.
+
+An instance can be constructed by passing a "dest" instance of the Vertex Class, along with an optional "orig" Vertex.
+If no "orig" is passed, it defaults to (0, 0, 0, 0, white).
+
+new Vector( array("dest" => dest_vertex, "orig" => orig_vertex) );
+
+The class provides the following methods:
+
+float    magnitude(void): 
+Returns the vector’s length (or "norm").
+
+Vector   normalize():
+Returns a normalized version of the vector.
+
+Vector   add( Vector $rhs ): 
+Returns the sum vector of both vectors.
+
+Vector   sub( Vector $rhs ):
+Returns the difference vector of both vectors.
+
+Vector   opposite():
+Returns the opposite vector.
+
+Vector   scalarProduct( $k ):
+Returns the multiplication of the vector with a scalar.
+
+float    dotProduct( Vector $rhs ):
+Returns the scalar multiplication of both vectors.
+
+float    cos( Vector $rhs ): 
+Returns the angle’sAppendix cosine between both vectors.
+
+Vector   crossProduct( Vector $rhs ):
+Returns the cross product of both.

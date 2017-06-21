@@ -1,0 +1,75 @@
+<DOCTYPE! html>
+<html>
+<head>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div id="calc">
+		<input type="text" id="left" value ="" />
+		<select id="op">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input type="text" id="right" value ="" />
+	</div>
+	<input type="submit" id="submit" value="Try me!" />
+</body>
+</html>
+<script>
+	setInterval(function() {
+		alert("Please, use me...");
+	}, 30000);
+	function is_nonneg_int(str)
+	{
+		var n = Math.floor(Number(str));
+		return (String(n) === str && n >= 0);
+	}
+
+	var submit = document.getElementById("submit");
+	submit.addEventListener("click", function() {
+		var left_str = document.getElementById("left").value;
+		var right_str = document.getElementById("right").value;
+		var op = document.getElementById("op").value;
+		if (!is_nonneg_int(left_str) || !is_nonneg_int(right_str))
+		{
+			console.log("Error :(");
+			alert("Error :(");
+		}
+		else if ((op === "%" || op ==="/") && parseInt(right_str) === 0)
+		{
+				console.log("It's over 9000!");
+				alert("It's over 9000!");
+		}
+		else
+		{
+			var l = parseInt(left_str);
+			var r = parseInt(right_str);
+			var result;
+			switch(op)
+			{
+				case "+":
+					result = l + r;
+					break;
+				case "-":
+					result = l - r;
+					break;
+				case "*":
+					result = l * r;
+					break;
+				case "/":
+					result = l / r;
+					break;
+				case "%":
+					result = l % r;
+					break;
+			}
+			console.log(result);
+			alert(result);
+		}
+	})
+</script>

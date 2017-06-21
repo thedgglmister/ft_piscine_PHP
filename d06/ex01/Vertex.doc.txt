@@ -1,0 +1,9 @@
+The Vertex class has x, y, z, and w attributes, as well as a color attribute.
+
+An instance can be constructed from an array with mandatory x, y, and z values. 
+w and color values are optional, and will default to 1.0 and white, respectively:
+
+new Vertex( array( 'x' => 2, 'y' => 1.5, 'z' => 0.2, 'w' => 1.0, 'color' => $color) );
+
+x, y, z, and w are floating point values, and color is an instance of the Color class.
+Any other use is undefined behavior.
